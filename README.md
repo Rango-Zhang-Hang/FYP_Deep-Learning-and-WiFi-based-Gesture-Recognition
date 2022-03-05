@@ -1,6 +1,7 @@
 ## FYP_Hand Gesture Recognition Based on WI-FI Signals and Deep Learning
 This project allows me to extract Channel State Information(CSI) and use Convolutional Nerual Network(CNN) to recognize these data frame to related hand gestures labels.
 * [Get_started](#get_started)
+* [Deep_Learning](#deep_learning)
 * [CSI_Measurement](#csi_measurement)
 * [RaspberryPi_setup](#raspberrypi_setup)
 * [Technologies](#technologies)
@@ -10,6 +11,9 @@ For full information about CSI, please check [NEXMON_CSI](https://github.com/see
 ## Get_started
 Buy a Raspberry Pi4.
 	
+## Deep_Learning
+In this project, Convolutional Neural Network(CNN) is used.
+
 ## CSI_measurement  
 First, finish the [setup_guides](#setup) and make sure the [versions](#technologies) are correct.
 
