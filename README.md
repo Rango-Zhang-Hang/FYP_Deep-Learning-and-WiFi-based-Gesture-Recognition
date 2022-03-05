@@ -13,7 +13,7 @@ Buy a Raspberry Pi4.
 	
 ## Deep_Learning
 In this project, Convolutional Neural Network(CNN) is used.
-Use **CNN1116** to trained the model.
+Use **Test1116** to make a trained CNN model.
 
 ## CSI_measurement  
 First, finish the [setup_guides](#setup) and make sure the [versions](#technologies) are correct.
