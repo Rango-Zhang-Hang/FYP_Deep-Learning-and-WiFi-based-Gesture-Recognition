@@ -29,7 +29,7 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
    where the **$MAC** is the router amc address.
    Also, 
    ```
-   str='mcp -c 157/80 -C 1 -N 1'
+   str=`mcp -c 36/80 -C 1 -N 1`
    ```
    is accpeted.
    
