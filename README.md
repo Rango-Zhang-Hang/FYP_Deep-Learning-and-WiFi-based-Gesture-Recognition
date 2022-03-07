@@ -20,11 +20,11 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
 
 1. Use **mcp** to generate a parameter string which is used to configure the extractor,you can also check the full conmmand list with **mcp -h**. The following sample  collects    CSI on channel 36 (5GHz, it is the only channel worked in most of the time, and also 5GHz has less interruptions) with bandwidth 80 MHz on first core of the WiFi chip, for the  first spatial stream. Raspberry Pi has only one core, and a single antenna, so the last two options don't need changing.
    ```
-   mcp -c 157/80 -C 1 -N 1
+   mcp -c 36/80 -C 1 -N 1
    ```
    Or you can type
    ```
-   mcp -c 157/80 -C 1 -N 1 -b $MAC 0X80	
+   mcp -c 36/80 -C 1 -N 1 -m $MAC 	
    ```
    where the **$MAC** is the router amc address.
    Also, 
