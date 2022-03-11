@@ -9,4 +9,4 @@ iw dev wlan0 interface add mon0 type monitor
 sleep 1s
 ip link set mon0 up
 sleep 1s
-tcpdump -i wlan0 dst port 5500 -vv -w output.pcap -c 200
+tcpdump -i wlan0 dst port 5500 -vv -w output.pcap -c 2000
