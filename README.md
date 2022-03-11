@@ -47,6 +47,8 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
 - I noticed that when collecting CSI, the raspberry pi cannot connect to wi-fi. So how does it realize the collection of CSI without connecting to WI-FI? And does this mean that the raspberry pi cannot send data packets to another raspberry pi through Wi-Fi during collecting CSI in the wireless channel?
 - That's correct. Your raspberry pi does not connect to any WiFi. Instead, it just listens to all packets going in the channel you configured. It's very similar to monitor mode; instead of collecting packets, we collect CSI data. And yes, the Raspberry Pi cannot send data packets through the inbuilt WiFi chip. You can use a WiFi adapter on your raspberry pi to send wifi packets (not recommended) or use another Raspberry Pi or a different device. Read this paper for a deeper understanding of how the tool works: Free your CSI.
 
+5. Other. You can use **run.sh** directly to replace the command lines in above steps. If you encounter the problem while using ```nano```, After executing the command error show as "Error reading lock file ./..env.swp not enough data read". This is because any file you open with any editor .swp file gets created. And in here, log file size huge and space on device is insufficient to open the file in editor. . You can use ```$ find . -name "*.swp" -delete``` to delete all .swp file. Execute ```$ find . -name "*.swp"``` to make sure all were deleted.
+
 ## RaspberryPi_setup
 For full information, move to [zero0-4.19.97](https://github.com/nexmonster/nexmon_csi/tree/pi-4.19.97)
 Install with commands:
