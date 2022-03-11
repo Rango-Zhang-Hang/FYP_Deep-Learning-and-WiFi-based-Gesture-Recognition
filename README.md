@@ -41,6 +41,8 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
    iw dev wlan0 interface add mon0 type monitor
    ip link set mon0 up
    ```
+   The appearance of ```command failed: Operation not supported (-95)``` shows the correct way.
+   
 3. Collect the CSI by listening on socket 5500 for UDP packets. One way to do this is using tcpdump: ```tcpdump -i wlan0 dst port 5500```. You can store 1000 CSI samples in a pcap file like this: ```tcpdump -i wlan0 dst port 5500 -vv -w output.pcap -c 1000```. It is 100 packets per second in Lab.
 
 4. Some questions.
