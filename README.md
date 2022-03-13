@@ -15,6 +15,7 @@ Buy a Raspberry Pi4.
 In this project, Convolutional Neural Network(CNN) is used.
 Use **Test1116** to make a trained CNN model.
 Use **load.py** to predict a new data.
+Use **csi_plot.py** to read the pcap file.
 
 ## CSI_measurement  
 First, finish the [setup_guides](#setup) and make sure the [versions](#technologies) are correct.
