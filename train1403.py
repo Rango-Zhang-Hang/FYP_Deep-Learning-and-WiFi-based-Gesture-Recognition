@@ -162,7 +162,11 @@ plt.legend(['train', 'test'], loc='upper left')
 plt.show()
 
 
-
+# Generate a prediction using model.predict()
+# and calculate it's shape:
+print("Generate a prediction")
+prediction = model.predict(csi_tensor[:1])
+print("prediction:", prediction)
 
 
 
