@@ -12,10 +12,11 @@ For full information about CSI, please check [NEXMON_CSI](https://github.com/see
 Buy a Raspberry Pi4.
 	
 ## Deep_Learning
-In this project, Convolutional Neural Network(CNN) is used.
-Use **Test1116** to make a trained CNN model.
-Use **load.py** to predict a new data.
-Use **csi_plot.py** to read the pcap file.
+In this project, Convolutional Neural Network(CNN) is used. 
+
+1. Use **Test1116** to make a trained CNN model. Use **load.py** to predict a new data. Use **csi_plot.py** to read the pcap file.
+
+2. (Update on 16.03) Use **train1403.py** and **predcit.py**.
 
 ## CSI_measurement  
 First, finish the [setup_guides](#setup) and make sure the [versions](#technologies) are correct.
