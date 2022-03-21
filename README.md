@@ -36,6 +36,7 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
    ```
    is accpeted.
    
+   Make sure the Mac is the hotsopt one, no the physical one.
 2. Run the following lines:
    ```
    ifconfig wlan0 up
@@ -45,7 +46,7 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
    ```
    The appearance of ```command failed: Operation not supported (-95)``` shows the correct way.
    
-3. Collect the CSI by listening on socket 5500 for UDP packets. One way to do this is using tcpdump: ```tcpdump -i wlan0 dst port 5500```. You can store 1000 CSI samples in a pcap file like this: ```tcpdump -i wlan0 dst port 5500 -vv -w output.pcap -c 1000```. It is 100 packets per second in Lab.
+3. Collect the CSI by listening on socket 5500 for UDP packets. One way to do this is using tcpdump: ```tcpdump -i wlan0 dst port 5500```. You can store 1000 CSI samples in a pcap file like this: ```tcpdump -i wlan0 dst port 5500 -vv -w output.pcap -c 1000```. It is 3-5 packets per second in Lab.
 
 4. Some questions.
 - I noticed that when collecting CSI, the raspberry pi cannot connect to wi-fi. So how does it realize the collection of CSI without connecting to WI-FI? And does this mean that the raspberry pi cannot send data packets to another raspberry pi through Wi-Fi during collecting CSI in the wireless channel?
