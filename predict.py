@@ -10,7 +10,7 @@ decoder = importlib.import_module(f'mydecoders.{config.decoder}') # This is also
 label = ['Eight', 'OneFinger', 'Five', 'C']
 model = keras.models.load_model('FYPmodel')
 
-pcap_filename = 'test.pcap'
+pcap_filename = 'pcapfiles/test.pcap'
 sample = decoder.read_pcap(pcap_filename)
 csi = np.zeros(shape=(1,5,256),dtype=complex)
 
@@ -18,6 +18,8 @@ for i in range(5):
     # packets 0-1999
     csi[0,i] = sample.get_csi(i)
 
+csi = csi.reshape(1,5,256,1)
+print(csi.shape)
 csi_abs = np.abs(csi)
 csi_ang = np.angle(csi)
 csi_tensor = np.concatenate((csi_abs,csi_ang),2) #256->512

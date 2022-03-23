@@ -29,10 +29,10 @@ a = numpy.zeros(shape=(1600,5,256),dtype=complex)
 b = numpy.zeros(shape=(1600), dtype = "object") #'8', 'onefinger', 'five', 'C'
 c = numpy.zeros(shape=(2000,1,256),dtype=complex)
 
-pcap_filename1 = 'pcapfiles/eight1403.pcap'
-pcap_filename2 = 'pcapfiles/midfinger1403.pcap'
-pcap_filename3 = 'pcapfiles/wave1403.pcap'
-pcap_filename4 = 'pcapfiles/C_1103_2000.pcap'
+pcap_filename1 = 'pcapfiles/eight2103.pcap'
+pcap_filename2 = 'pcapfiles/six2103.pcap'
+pcap_filename3 = 'pcapfiles/five2103.pcap'
+pcap_filename4 = 'pcapfiles/C2103.pcap'
 #....many as we want
 index = 4
 sample1 = decoder.read_pcap(pcap_filename1)
@@ -58,7 +58,11 @@ for j in range(400):
 #dataset = np.load('pcapfiles/dataset1403.npy',allow_pickle='TRUE')
 #print(dataset)
 # reshape CSI values
-csi = a
+print(a.shape)
+csi = a.reshape(1600,5,256,1)
+print(csi.shape)
+
+
 csi_abs = np.abs(csi)
 csi_ang = np.angle(csi)
 csi_tensor = np.concatenate((csi_abs,csi_ang),2) #256->512
@@ -82,8 +86,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 X_train = tf.convert_to_tensor(X_train)
 X_test = tf.convert_to_tensor(X_test)
 
-#print(X_train.shape)
-#print(X_test.shape)
+print(X_train.shape)
+print(X_test.shape)
 
 
 # Hyperparameters
@@ -103,7 +107,7 @@ python_random.seed(42)
 
 #print(csi_tensor.shape)
 
-csi_tensor = csi_tensor.reshape(1600,5,512,1)
+csi_tensor = csi_tensor.reshape(1600,5,512,1) #batch, height, width, channels
 
 # Create model
 def baseline_model():
@@ -137,7 +141,7 @@ kfold = KFold(n_splits=5, shuffle= True, random_state= 42)
 crossval = cross_val_score(estimator, csi_tensor, dummy_y, cv = kfold)
 print(crossval.mean())
 
-model.save('signfimodel')
+model.save('FYPmodel')
 
 # List all data in history
 #print(history.history.keys())
@@ -148,7 +152,7 @@ plt.plot(history.history['val_accuracy'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
+plt.legend(['train', 'validation'], loc='upper left')
 plt.show()
 
 # Summarize history for loss
@@ -162,11 +166,6 @@ plt.legend(['train', 'test'], loc='upper left')
 plt.show()
 
 
-# Generate a prediction using model.predict()
-# and calculate it's shape:
-print("Generate a prediction")
-prediction = model.predict(csi_tensor[:1])
-print("prediction:", prediction)
 
 
 
