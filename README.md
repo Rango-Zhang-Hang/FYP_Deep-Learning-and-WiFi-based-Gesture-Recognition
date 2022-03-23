@@ -69,7 +69,8 @@ Project is created with:
 * Firmware version: 7_45_189 
 * WI-FI chip: bcm43455c0
 * Device used: Raspberry Pi B4
-	
+* python3.7
+* tensorflow==2.2.0	
 
 
 
