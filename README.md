@@ -64,7 +64,11 @@ tar -xzvf nexbin.tar.gz
 cd nexbin
 sudo bash install.sh
 ```
-
+or
+```
+intalled the 2021-01-11-raspios-buster-armhf-full
+then used this: https://github.com/nexmonster/nexmon_csi/tree/pi-4.19.97-plus, except I used the 5.4.51 script - wget https://raw.githubusercontent.com/zeroby0/nexmon_csi/pi-5.4.51/install.sh -O install.sh instead of the 4.19.97 installation script.
+```
 ## Technologies
 Project is created with:
 * Kernel version: 5.4
