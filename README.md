@@ -59,7 +59,10 @@ For full information, move to [zero0-4.19.97](https://github.com/nexmonster/nexm
 Install with commands:
 
 ```
-$unfinshed
+wget https://github.com/nexmonster/nexmon_csi/files/7662477/nexbin.tar.gz
+tar -xzvf nexbin.tar.gz
+cd nexbin
+sudo bash install.sh
 ```
 
 ## Technologies
