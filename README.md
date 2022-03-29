@@ -55,7 +55,7 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
 5. Other. You can use **run.sh** directly to replace the command lines in above steps. If you encounter the problem while using ```nano```, After executing the command error show as "Error reading lock file ./..env.swp not enough data read". This is because any file you open with any editor .swp file gets created. And in here, log file size huge and space on device is insufficient to open the file in editor. . You can use ```$ find . -name "*.swp" -delete``` to delete all .swp file. Execute ```$ find . -name "*.swp"``` to make sure all were deleted.
 
 ## RaspberryPi_setup
-For full information, move to [zero0-4.19.97](https://github.com/nexmonster/nexmon_csi/tree/pi-4.19.97). Be ware that the firmware version is **5.14.51**
+For full information, move to [zero0-4.19.97](https://github.com/nexmonster/nexmon_csi/tree/pi-4.19.97). Be ware that the firmware version is **5.4.51**
 Install with commands:
 Follow the Readme in 'install'
 or
