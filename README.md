@@ -57,7 +57,8 @@ First, finish the [setup_guides](#setup) and make sure the [versions](#technolog
 ## RaspberryPi_setup
 For full information, move to [zero0-4.19.97](https://github.com/nexmonster/nexmon_csi/tree/pi-4.19.97). Be ware that the firmware version is **5.14.51**
 Install with commands:
-
+Follow the Readme in 'install'
+or
 ```
 wget https://github.com/nexmonster/nexmon_csi/files/7662477/nexbin.tar.gz
 tar -xzvf nexbin.tar.gz
