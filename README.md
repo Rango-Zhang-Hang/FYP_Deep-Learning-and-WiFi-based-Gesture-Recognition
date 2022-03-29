@@ -73,7 +73,7 @@ then used this: https://github.com/nexmonster/nexmon_csi/tree/pi-4.19.97-plus, e
 ## Technologies
 Project is created with:
 * Kernel version: 5.4
-* Image version: 2020-08-20-buster-lite
+* Image version: 2021-01-11-buster-lite
 * Firmware version: 7_45_189 
 * WI-FI chip: bcm43455c0
 * Device used: Raspberry Pi B4
